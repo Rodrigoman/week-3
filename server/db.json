@@ -7,10 +7,9 @@
       "author": "typicode"
     },
     {
-      "id": 2,
       "title": "second post",
-      "body": "second body",
-      "author": "typicode"
+      "body": "second body post",
+      "id": 2
     }
   ],
   "comments": [

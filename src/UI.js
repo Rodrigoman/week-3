@@ -53,9 +53,42 @@ class UI {
     }
   }
 
+  clearIdInput() {
+    this.idInput = '';
+  }
+
   clearFields() {
     this.titleInput.value = '';
     this.bodyInput.value = '';
+  }
+
+  fillForm(data) {
+    this.titleInput.value = data.title;
+    this.bodyInput.value = data.body;
+    this.idInput.value = data.id;
+    this.changeFormState('edit');
+  }
+
+  changeFormState(type) {
+    if (type === 'edit') {
+      this.postSubmit.textContent = 'Update Post';
+      this.postSubmit.className = 'post-submit btn btn-warning bnt-block';
+
+      const button = document.createElement('button');
+      button.className = 'post-cancel btn btnl-light btn-block';
+      button.appendChild(document.createTextNode('Cancel edit'));
+      const cardForm = document.querySelector('.card-form');
+      const cardEnd = document.querySelector('.card-end');
+      cardForm.insertBefore(button, cardEnd);
+    } else {
+      this.postSubmit.textContent = 'Post It';
+      this.postSubmit.className = 'post-submit btn btn-primary bnt-block';
+      if (document.querySelector('.post-cancel')) {
+        document.querySelector('.post-cancel').remove();
+        this.clearIdInput();
+        this.clearFields();
+      }
+    }
   }
 }
 export const ui = new UI();
