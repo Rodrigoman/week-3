@@ -1,10 +1,11 @@
-const greeting = 'Hello World';
-console.log(greeting);
+import {http} from './http.js'
+//getData('https://jsonplaceholder.typicode.com/posts');
 
-const getData = async (url) => {
-  const response = await fetch(url);
-  const result = await response.json();
-  console.log(result);
-};
+document.addEventListener('DOMContentLoaded',getPosts);
 
-getData('https://jsonplaceholder.typicode.com/posts');
+function getPosts() {
+ http.get('https://jsonplaceholder.typicode.com/posts').then(data => {
+   console.log(data);
+   
+ }).catch(error => console.log(error))
+}
