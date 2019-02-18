@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "body": "body",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "second post",
+      "body": "second body",
+      "author": "typicode"
+    },
+    {
+      "title": "no",
+      "body": "no ",
+      "id": 3
+    },
+    {
+      "title": "no",
+      "body": "no\n ",
+      "id": 4
+    },
+    {
+      "title": "este s",
+      "body": "si ",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
