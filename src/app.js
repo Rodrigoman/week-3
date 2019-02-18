@@ -20,7 +20,22 @@ function submitPost() {
     getPosts();
   }).catch(err => console.log(err));
 }
+function deltePost(e) {
+  e.preventDefault();
+  if (e.target.parentElement.classList.contains('delete')) {
+    console.log('delete');
+    const { id } = e.target.parentElement.dataset;
+    if (confirm('Are you suere?')) {
+      http.delete(`http://localhost:3000/posts/${id}`)
+        .then((data) => {
+          ui.showAlert('post removed', 'alert alert-success');
+          getPosts();
+        }).catch(error => console.log(error));
+    }
+  }
+}
 
 document.addEventListener('DOMContentLoaded', getPosts);
 
 document.querySelector('.post-submit').addEventListener('click', submitPost);
+document.querySelector('#posts').addEventListener('click', deltePost);
