@@ -1,3 +1,11 @@
-.delete{
+.delete {
     color:red;
+}
+.flex{
+    display: flex;
+}
+
+#navbar{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
 }
