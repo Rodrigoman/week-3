@@ -17,6 +17,11 @@ class Home extends PageState {
     `;
   }
 
+  async getTags() {
+    const tags = await this.http.get(`${this.domain}tags`);
+    return tags;
+  }
+
   async getPosts() {
     const posts = await this.http.get(`${this.domain}posts`);
     return posts;
