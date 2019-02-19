@@ -1,24 +1,85 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "body": "body",
-      "author": "typicode"
+      "title": "Beautiful landscapes",
+      "author": "Elizabeth Alvanez",
+      "tags": ["SELF","HEALTH"],
+      "body": "Te vivendo accusamus hendrerit nec. Novum mentitum nec at, sumo molestiae an vix. Vix error deleniti ea. Sea ea elitr consequat. At sed quem accusata ullamcorper.",
+      "id": 1
+    },
+    {
+      "title": "The seculars",
+      "author": "Rodrigo Lozano",
+      "body": "Lorem ipsum dolor sit amet, ex nisl sanctus nonumes ius, dolor pertinax et has, sea impetus reprehendunt ex. Etiam nihil quidam ad vel, timeam mandamus vim ut. Duis rationibus eum no. Ut quo dicant dolore invenire, ut sit oratio audiam phaedrum, id sit impetus expetenda reprehendunt. No sit vocent gloriatur. Movet causae adversarium pri ex, ne qui molestie facilisi electram, ipsum ubique usu ea. No eum falli saperet, at commune postulant temporibus vel. Ut nihil animal qualisque mel, molestie appareat posidonium ad usu. Est erat labore deleniti in, ut nam nonumy audire. Ex eos reque dicat, eos et elitr tritani, vix accumsan phaedrum inciderint te. Eu vis sonet efficiendi, eam adipiscing interpretaris ei. Omnium scaevola his ex, ut has augue viris sapientem. Laudem graecis facilisis ne per. Maluisset dignissim complectitur sit in. Quot fugit latine eu sit, ea cibo veri ceteros sea, an tation libris est. Noluisse lobortis ei eum, vide dicant no vis. Ut sapientem consequuntur vix, vis ea mentitum expetenda. Cibo quodsi gubergren pri cu, sanctus praesent concludaturque pro te. Cu mea vide appetere intellegat. Ut rebum posidonium vis. Ubique doming ne sed. Te vivendo accusamus hendrerit nec. Novum mentitum nec at, sumo molestiae an vix. Vix error deleniti ea. Sea ea elitr consequat. At sed quem accusata ullamcorper.",
+      "id": 2
+    },
+    {
+      "title": "third movie about",
+      "author": "Rodrigo Lozano",
+      "body": "An cum singulis torquatos, ut cum prompta verterem, illud nostrum consequat eam eu. At per splendide assueverit. Pri te illum dolorum fabellas, his in case definiebas, odio instructior signiferumque mel eu. Eos te saepe mollis, dolor nostrud recteque eu duo, id omnes accusata sensibus eum. Mei duis graece tacimates ex, audire philosophia eum in, latine docendi fuisset et mel. Eu pri numquam sapientem. Ne natum ludus vim, vituperata liberavisse ullamcorper id per, dicam lucilius no sed. Rebum labore sea ad, pri at dicam accusamus theophrastus. Omnium copiosae partiendo ne eum, pro ne meis error. Doming facete detraxit sed in. Populo abhorreant vis no, mei mandamus efficiendi no, est in wisi modus liber. Elit legimus scripserit sea et, exerci scripserit est eu. Exerci senserit eos no, eam malis graece integre ex, id nostrum consetetur persequeris mel. Sit at aliquam accusamus splendide, nam eu expetendis dissentiet. Eu quis esse malorum vel. An probo nobis reprehendunt per, denique electram in cum. Eam vide percipitur at, at luptatum urbanitas sea. Eripuit theophrastus concludaturque mea ei. Oratio everti splendide an his, ex ius tacimates quaerendum, per cu detraxit mnesarchum. Nec suscipit pericula no. Sed appetere vulputate te, suavitate aliquando usu an. Nec amet soluta altera no, tale ferri an nam. Et docendi offendit tacimates has. Vel at homero instructior definitionem, nam modo dissentias ad, in vis doming meliore vituperata. Id maiorum lobortis sea, ex per altera adolescens eloquentiam, oratio mucius nec no. Sint graeci pri in, vidisse phaedrum periculis quo te. An vim exerci suscipit, augue commune urbanitas mea in. Regione equidem sanctus ea vix, porro albucius vix et. Te his cibo feugait, ridens facilisis ut duo. Debet voluptatum mea id. Vim posse minim utinam ei, mentitum officiis et qui. Te cum stet invidunt. No enim suscipit cum, tota persius ut ius.",
+      "id": 3
+    },
+    {
+      "title": "No mel impetus",
+      "author": "Rodrigo Lozano",
+      "body": "Ex mel impetus nominavi? No accusata vulputate vel, fabulas urbanitas dissentias cu has. Autem offendit mel et. Ad fabulas insolens nec, ex alii elit mundi eam, id liber nullam vix. Ex est percipitur reprehendunt, his ea aliquip molestiae. An ancillae detraxit definitionem sit?",
+      "id": 4
     },
     {
       "title": "second post",
-      "body": "second body post",
-      "id": 2
-    }
-  ],
-  "comments": [
+      "author": "Rodrigo Lozano",
+      "body": "In his sale scriptorem interpretaris, odio dissentiet delicatissimi duo te, purto idque vis cu. Duo debet partiendo pertinacia at, recteque explicari te est. Duo habeo vulputate ne, vel affert verterem te. No dicunt alienum has, no has iudico epicurei, utinam tritani usu in. Velit prodesset democritum cu qui, ut esse veritus nam. Cu nec odio affert delicata, ad impetus mentitum electram eum. Qui te regione mandamus indoctum. Per congue denique ei, eu sit commune neglegentur, ut vim purto periculis sadipscing. Vim doming feugiat definitiones ei. Liber nihil usu id, ius ad graeci recusabo. Eu has ancillae reprehendunt, mel in salutatus constituam. Ea qui adhuc legendos quaestio. No vix magna nobis aliquid. Ad solum augue forensibus usu, decore oporteat ut has. Tation detracto voluptua in pro, virtute evertitur mei et, his at dictas docendi. Eum cu munere dissentiunt ullamcorper, ad duo alii splendide efficiendi. Per dictas habemus dignissim an, vim odio magna interesset ad. No pro noluisse volutpat postulant, cum te brute discere albucius. Ut quando singulis similique usu, clita audiam expetenda in nec. Ignota putent has id, te sed suas solet temporibus. Verear diceret apeirian vis an, modus prodesset appellantur has ut, ei illud latine perpetua sit.",
+      "id": 5
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "title": "Esplendid words!",
+      "author": "Rodrigo Lozano",
+      "tags": ["HEALTH","SELF","POPULAR"],
+      "body": "Graecis perfecto referrentur duo te, nam te aeque iisque oblique! Ne quod illud mediocritatem mei, eros iisque qui ne. Pro minim populo propriae cu. Vel at nominavi torquatos, tale neglegentur disputationi ex ius, munere ornatus incorrupte ne vel. Ex mazim lobortis quo, an per novum laudem? Probo prima nostro id sit, no nec elit feugait, has harum sapientem et. Dicant integre consectetuer in eum, eam id utroque suscipit, nam et putent meliore splendide. ",
+      "featuredImage": "https://picsum.photos/400/?image=996",
+      "id": 6
+    },
+    {
+      "title": "what",
+      "author": "Lala Ramirez",
+      "body": "Mei te solet possit constituam, eam ne ludus possim. Quo natum zril sensibus in. Eu noster mediocrem elaboraret sit? In nulla nusquam intellegebat mea, eos oblique noluisse forensibus ea, te praesent adipiscing vis. Mea zril comprehensam no, admodum habemus deterruisset ut eum.",
+      "id": 7
+    },
+    {
+      "title": "Beautiful landscapes",
+      "author": "Elizabeth Alvanez",
+      "body": "Debet voluptatum mea id. Vim posse minim utinam ei, mentitum officiis et qui. Te cum stet invidunt. No enim suscipit cum, tota persius ut ius.",
+      "id": 8
+    },
+    {
+      "title": "landscapes to see",
+      "author": "Elizabeth Alvanez",
+      "body": "Mei te solet possit constituam, eam ne ludus possim. Quo natum zril sensibus in. Eu noster mediocrem elaboraret sit? In nulla nusquam intellegebat mea, eos oblique noluisse forensibus ea, te praesent adipiscing vis. Mea zril comprehensam no, admodum habemus deterruisset ut eum.",
+      "id": 9
+    },
+    {
+      "title": "Some ideas",
+      "author": "Elizabeth Alvanez",
+      "body": "Te vivendo accusamus hendrerit nec. Novum mentitum nec at, sumo molestiae an vix. Vix error deleniti ea. Sea ea elitr consequat. At sed quem accusata ullamcorper.",
+      "id": 10
     }
   ],
+  "tags": [
+    {"name":"HOME"},
+    {"name":"DOUBT"},
+    {"name":"CULTURE"},
+    {"name":"TECH"},
+    {"name":"STARTUPS"},
+    {"name":"STARTUPS"},
+    {"name":"SELF"},
+    {"name":"POLITICS"},
+    {"name":"DESIGN"},
+    {"name":"HEALTH"},
+    {"name":"POPULAR"},
+    {"name":"COLLECTIONS"},
+    {"name":"MORE"}
+  ],
+  "comments": [],
   "profile": {
     "name": "typicode"
   }
