@@ -1,8 +1,10 @@
 import PageState from './page-state.js';
 
 class Home extends PageState {
-  handle(context) {
+  async handle(context) {
     this.createMenu();
+    this.posts = await this.getPosts();
+    this.createPostsCointainer();
   }
 
   createMenu() {
@@ -16,8 +18,34 @@ class Home extends PageState {
   }
 
   async getPosts() {
-    const posts = await this.http.get(this.domain);
-    console.log(posts);
+    const posts = await this.http.get(`${this.domain}posts`);
+    return posts;
+  }
+
+  createPostsCointainer() {
+    let postList = '';
+    console.log(this.posts);
+    this.posts.forEach((post) => {
+      const ramdomPhoto = `https://picsum.photos/400/?random${Math.random()}`;
+      const validPhoto = post.featuredImage ? post.featuredImage : ramdomPhoto;
+      postList += `
+        <div class="card">
+          <div class="card-body">
+            <h3>${post.title}</h3>
+            <p class="card-text truncate-text-multiline">${post.body}</p>
+            <span>${post.author}</span>
+          </div>
+          <div class="small-image">
+            <img src="${validPhoto}" alt="" srcset="">
+          </div>
+        </div>
+    `;
+    });
+    this.mainContainer.innerHTML = `
+    <div class="postContainer">
+        ${postList}
+    </div>
+    `;
   }
 }
 
