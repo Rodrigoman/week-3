@@ -52,6 +52,19 @@ class Home extends PageState {
     </div>
     `;
   }
+
+  searchTag(tag) {
+  }
+
+  listenTags() {
+    const tags = document.querySelectorAll('.tag');
+    tags.forEach((tag) => {
+      tag.addEventListener('click', (e) => {
+        this.searchTag(e.target.innerHTML);
+        e.preventDefault();
+      });
+    });
+  }
 }
 
 export default Home;
