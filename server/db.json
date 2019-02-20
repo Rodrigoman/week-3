@@ -80,6 +80,10 @@
     {"name":"COLLECTIONS"},
     {"name":"MORE"}
   ],
+  "template": [{
+    "id": 1,
+    "post" : "<h2>This is going to be Your Post...</h2><p><span style='font-weight: normal;'>Please, remember that you can<i> drag and drop</i> images from YOUR PC.</span></p><blockquote>Happy writing :D</blockquote>"
+  }],
   "comments": [],
   "profile": {
     "name": "typicode"
