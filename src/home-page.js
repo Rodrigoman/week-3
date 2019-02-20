@@ -6,7 +6,7 @@ class Home extends PageState {
     this.createMenu();
     this.listenTags();
     this.posts = await this.getPosts();
-    this.createPostsCointainer();
+    this.createPostsCointainer(this.posts, false);
   }
 
   createMenu() {
@@ -39,18 +39,18 @@ class Home extends PageState {
     return posts;
   }
 
-  createPostsCointainer() {
+  createPostsCointainer(posts, fromSearch = 'false') {
     let postList = '';
     let firstPost = '';
     let middlePosts = '';
     let fourth = '';
-    console.log(this.posts);
-    this.posts.forEach((post, index) => {
+    console.log(posts);
+    posts.forEach((post, index) => {
       const ramdomPhoto = `https://picsum.photos/400/?random${Math.random()}`;
       const validPhoto = post.featuredImage ? post.featuredImage : ramdomPhoto;
 
       switch (true) {
-        case (index === 0):
+        case ((index === 0) && !fromSearch):
           firstPost += `
             <div class="first-card">
               <div class="image-large">
@@ -66,7 +66,7 @@ class Home extends PageState {
               </div>
             </div>`;
           break;
-        case (index > 0) && (index <= 3):
+        case ((index > 0) && (index <= 3) && !fromSearch):
           middlePosts += `
             <div class="middle-card">
               <div class="small-image">
@@ -81,7 +81,7 @@ class Home extends PageState {
               </div>
             </div>`;
           break;
-        case (index === 4):
+        case ((index === 4) && !fromSearch):
           fourth += `
           <div class="fourth-card">
             <div class="image-large">
@@ -95,7 +95,9 @@ class Home extends PageState {
           </div>
             `;
           break;
-        case (index > 4):
+        case (index > 4 || fromSearch):
+          console.log('hey');
+
           postList += `
             <div class="card">
               <div class="card-body">
@@ -113,7 +115,14 @@ class Home extends PageState {
           break;
       }
     });
-    this.mainContainer.innerHTML = `    
+    if (fromSearch) {
+      this.mainContainer.innerHTML = `
+          <div class="postContainer">
+            ${postList}
+          </div>
+      `;
+    } else {
+      this.mainContainer.innerHTML = `    
         <div>
             <div class="featured-posts">
                 <div class="first">${firstPost}</div>
@@ -126,9 +135,17 @@ class Home extends PageState {
             </div>
         </div>
     `;
+    }
   }
 
   searchTag(tag) {
+    const filterPost = this.posts.filter((post) => {
+      if (post.tags) {
+        return post.tags.includes(tag);
+      }
+      return false;
+    });
+    this.createPostsCointainer(filterPost, true);
   }
 
   listenTags() {
