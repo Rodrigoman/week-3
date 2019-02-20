@@ -18,7 +18,7 @@ class Home extends PageState {
     });
     this.navbar.innerHTML = `
         <div class="flex">
-            <h1>lacasaca.es</h1>
+            <h1 id="homeState">lacasaca.es</h1>
             <div>
                 <button class="btn btn-primary">Create Post</button>
             </div>
@@ -60,7 +60,7 @@ class Home extends PageState {
                   <div></div>
                 <div>
                   <h3>${post.title}</h3>
-                  <p class="card-text truncate-text-multiline">${post.body}</p>
+                  <p class="card-text truncate-text-multiline">${post.desc}</p>
                   <span>${post.author}</span>
                 </div>
               </div>
@@ -75,7 +75,7 @@ class Home extends PageState {
               <div class="card-body">
                 <h3>${post.title}</h3>
                 <p class="card-text truncate-text-multiline">
-                  ${post.body}
+                  ${post.desc}
                 </p>
                 <span>${post.author}</span>
               </div>
@@ -89,21 +89,19 @@ class Home extends PageState {
             </div>
             <h3>${post.title}</h3>
             <p class="card-text truncate-text-multiline">
-              ${post.body}
+              ${post.desc}
             </p>
             <span>${post.author}</span>
           </div>
             `;
           break;
         case (index > 4 || fromSearch):
-          console.log('hey');
-
           postList += `
             <div class="card">
               <div class="card-body">
                 <h2>${post.title}</h2>
                 <p class="card-text truncate-text-multiline">
-                ${post.body}</p>
+                ${post.desc}</p>
                 <span>${post.author}</span>
               </div>
               <div class="small-image">
