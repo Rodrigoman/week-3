@@ -155,6 +155,14 @@ class Home extends PageState {
       });
     });
   }
+
+  listenCreateState() {
+    document.querySelector('#createState').addEventListener('click', (e) => {
+      e.preventDefault();
+      this.stateChanger.changeState('create');
+      this.stateChanger.request();
+    });
+  }
 }
 
 export default Home;
