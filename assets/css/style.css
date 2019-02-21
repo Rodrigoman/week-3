@@ -165,10 +165,129 @@ div#tagsBar {
   cursor: pointer;
 }
 
+/* edit create style */
+
+input.title {
+  border: none;
+  transition: border 50ms;
+  width: 100%;
+  height: 4rem;
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+  font-size: xx-large;
+  background-color: transparent;
+  position: relative;
+  color: white;
+  top: 180px;
+}
+
+.post-create-image {
+  min-width: 80vw;
+  height: 400px;
+  box-shadow: -1px 5px 10px 1px grey;
+  border-radius: 16px;
+  position: relative;
+  outline: none;
+  background-size: cover;
+  filter: sepia(50%);
+}
+
+input.tags {
+  margin: 1% 0% 0% 72%;
+  width: 28%;
+  height: 35px;
+  padding-right: 15px;
+  border: none;
+  text-align: right;
+  font-family: inherit;
+  text-shadow: 0 3px white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #b8bec5;
+}
+input#url {
+  height: 25px;
+  padding: 5px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+
+.popout-menu {
+  position: absolute;
+  visibility: hidden;
+  left: 39%;
+  background: #333;
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.post-create-image:hover > .popout-menu,
+.post-create-image:focus > .popout-menu,
+.post-create-image:focus-within > .popout-menu {
+  visibility: visible;
+}
+
+input.title:hover{
+  transition: 500ms;
+  cursor: text;
+  background: var(--third-color);
+}
+.post-content{
+  min-width: 80vw;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+}
+.editable {
+  min-height: 400px;
+}
+
+.save {
+  right: 3%;
+  height: 75px;
+  width: 45px;
+  position: fixed;
+  bottom: 5%;
+  cursor: pointer;
+}
+
+.heart {
+  right: 3%;
+  height: 75px;
+  width: 54px;
+  position: fixed;
+  bottom: 15%;
+  cursor: pointer;
+}
+
+blockquote{
+  font-size: 1.4em;
+  width:60%;
+  margin:50px auto;
+  font-style:italic;
+  color: #555555;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid var(--complementary-color); ;
+  line-height:1.6;
+  position: relative;
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:var(--complementary-color);
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
 ::selection {
   background:var(--main-color);
   color: black;
 }
 :root {
   --main-color: #4deeea;
+  --complementary-color: #eec64d;
+  --third-color: #ee4da0;
 }
