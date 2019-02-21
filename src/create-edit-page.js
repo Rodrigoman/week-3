@@ -22,6 +22,10 @@ class CreateEdit extends PageState {
     this.imgElement = document.querySelector('.post-create-image');
     console.log(this.imgElement);
     this.listenImgChange();
+    this.stateChanger = context;
+    this.listenHomeState();
+    this.listenSave();
+    this.listenHeart();
   }
 
   async getPostTemplate() {
