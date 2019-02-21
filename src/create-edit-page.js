@@ -34,6 +34,9 @@ class CreateEdit extends PageState {
     const template = this.http.get(`${this.domain}template/1`);
     return template;
   }
+    const template = this.http.get(`${this.domain}posts/${this.parameters['#blog']}`);
+    return template;
+  }
 
   createMenu() {
     let tagList = '';
@@ -54,6 +57,11 @@ class CreateEdit extends PageState {
 
   createEditBody() {
     const defaulImg = 'assets/img/roses.jpeg';
+
+    if (!this.isNew) {
+      defaulImg = this.postTemplate.featuredImage === '' ? defaulImg : this.postTemplate.featuredImage;
+      title = this.postTemplate.title === '' ? title : this.postTemplate.title;
+    }
 
     this.mainContainer.innerHTML = `
       <div>
