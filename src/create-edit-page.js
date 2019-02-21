@@ -4,6 +4,11 @@ import PageState from './page-state.js';
 
 
 class CreateEdit extends PageState {
+  constructor(params = 0) {
+    super();
+    this.parameters = params;
+  }
+
   async handle(context) {
     document.location.hash = '🌘';
     this.tags = [];
