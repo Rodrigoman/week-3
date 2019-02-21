@@ -29,6 +29,8 @@ class CreateEdit extends PageState {
   }
 
   async getPostTemplate() {
+    if (this.parameters['#blog'] === 'new') {
+      this.isNew = true;
     const template = this.http.get(`${this.domain}template/1`);
     return template;
   }
