@@ -1,4 +1,5 @@
 import MediumEditor from 'medium-editor';
+import lottie from 'lottie-web';
 import PageState from './page-state.js';
 
 
