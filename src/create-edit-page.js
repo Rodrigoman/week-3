@@ -10,17 +10,17 @@ class CreateEdit extends PageState {
   }
 
   async handle(context) {
-    document.location.hash = '🌘';
+    this.isNew = false;
+
+    this.postTemplate = await this.getPostTemplate();
     this.tags = [];
     this.createMenu();
     this.createEditBody();
 
     this.postContentContainer = document.querySelector('#post-content');
-    this.postTemplate = await this.getPostTemplate();
-    this.addNewPostContent();
+    this.fillPostContent();
     this.imgURL = document.querySelector('#url');
     this.imgElement = document.querySelector('.post-create-image');
-    console.log(this.imgElement);
     this.listenImgChange();
     this.stateChanger = context;
     this.listenHomeState();
@@ -31,9 +31,9 @@ class CreateEdit extends PageState {
   async getPostTemplate() {
     if (this.parameters['#blog'] === 'new') {
       this.isNew = true;
-    const template = this.http.get(`${this.domain}template/1`);
-    return template;
-  }
+      const template = this.http.get(`${this.domain}template/1`);
+      return template;
+    }
     const template = this.http.get(`${this.domain}posts/${this.parameters['#blog']}`);
     return template;
   }
@@ -56,7 +56,8 @@ class CreateEdit extends PageState {
   }
 
   createEditBody() {
-    const defaulImg = 'assets/img/roses.jpeg';
+    let defaulImg = 'assets/img/roses.jpeg';
+    let title = 'Your title...';
 
     if (!this.isNew) {
       defaulImg = this.postTemplate.featuredImage === '' ? defaulImg : this.postTemplate.featuredImage;
@@ -66,8 +67,7 @@ class CreateEdit extends PageState {
     this.mainContainer.innerHTML = `
       <div>
         <div class="post-create-image" tabindex="0" style='background-image: url("${defaulImg}")'>
-          <input type="hidden" name=""> 
-          <input class="title" id="title" type="text" value="Your title..." autocomplete="off">
+          <input class="title" id="title" type="text" value="${title}" autocomplete="off">
           <div class="popout-menu">
             <label for="url">Image url:</label>
             <input name="url" type="text" id="url" value="${defaulImg}">
@@ -75,31 +75,91 @@ class CreateEdit extends PageState {
         </div>
       </div>
       <div>
+        <div class="tags">
+          <input type="text" id="tags" class="tags" placeholder="Enter your tags separated by comma">
+        </div>
+      </div>
+      <div>
         <div class="post-content" id="post-content">
 
         </div>
-      </div>
-      
-    `;
+        <div class="heart">
+          <div id="heart" style="width: 100%;"> 
+        </div>
+        <div class="save">
+          <img id="save" src="assets/img/save.svg" style="width: 100%;"> 
+        </div>
+      </div>`;
+    this.heartAnimation = lottie.loadAnimation({
+      container: document.querySelector('#heart'), // the dom element that will contain the animation
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
+      path: 'assets/img/heart.json', // the path to the animation json
+      name: 'heart',
+    });
   }
 
-  addNewPostContent() {
+  fillPostContent() {
     const editable = document.createElement('div');
     editable.classList.add('editable');
-    editable.innerHTML = this.postTemplate.post;
+    editable.innerHTML = this.postTemplate.body;
     this.postContentContainer.appendChild(editable);
     this.editor = new MediumEditor('.editable');
   }
 
   listenImgChange() {
-    ['keyup', 'paste'].forEach(event => this.imgURL.addEventListener(event, () => {
-      this.imgElement.style.backgroundImage = `url(${this.imgURL.value})`;
-    }));
+    ['keyup', 'paste'].forEach(event => this.imgURL.addEventListener(event,
+      () => {
+        this.imgElement.style.backgroundImage = `url(${this.imgURL.value})`;
+      }));
   }
 
   async getTags() {
     const tags = await this.http.get(`${this.domain}tags`);
     return tags;
+  }
+
+  async savePost() {
+    const featuredImage = this.imgURL.value;
+    const title = document.querySelector('#title').value;
+    const body = this.editor.elements[0].innerHTML;
+    const desc = this.editor.elements[0].getElementsByTagName('P')[0].innerHTML;
+    const { id } = this.postTemplate;
+    const date = new Date();
+    let tags = [...new Set(document.querySelector('#tags').value.replace(/\s/g, '').split(','))];
+    tags = tags.map(tag => tag.toUpperCase());
+    if (this.isNew) {
+      this.http.post(`${this.domain}posts`, {
+        featuredImage, title, body, desc, date, tags,
+      });
+    } else {
+      this.http.put(`${this.domain}posts/${id}`, {
+        featuredImage, title, body, desc, tags,
+      });
+    }
+  }
+
+  listenHomeState() {
+    document.querySelector('#homeState').addEventListener('click', (e) => {
+      e.preventDefault();
+      this.stateChanger.changeState('home');
+      this.stateChanger.request();
+    });
+  }
+
+  listenSave() {
+    document.querySelector('#save').addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.savePost();
+    });
+  }
+
+  listenHeart() {
+    document.querySelector('.heart').addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.heartAnimation.goToAndPlay(15, true);
+    });
   }
 }
 
