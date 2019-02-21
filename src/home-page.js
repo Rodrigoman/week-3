@@ -2,11 +2,16 @@ import PageState from './page-state.js';
 
 class Home extends PageState {
   async handle(context) {
+    document.location.hash = '';
+
+    this.stateChanger = context;
     this.tags = await this.getTags();
     this.createMenu();
+    this.listenCreateState();
     this.listenTags();
     this.posts = await this.getPosts();
     this.createPostsCointainer(this.posts, false);
+    this.listenCards();
   }
 
   createMenu() {
@@ -20,7 +25,7 @@ class Home extends PageState {
         <div class="flex">
             <h1 id="homeState">lacasaca.es</h1>
             <div>
-                <button class="btn btn-primary">Create Post</button>
+                <button id="createState" class="btn btn-primary">Create Post</button>
             </div>
         </div>
         <div id='tagsBar'>
@@ -44,15 +49,15 @@ class Home extends PageState {
     let firstPost = '';
     let middlePosts = '';
     let fourth = '';
-    console.log(posts);
-    posts.forEach((post, index) => {
+    posts.reverse().forEach((post, index) => {
+      const author = post.author === undefined ? 'Rodrigo Lozano' : post.author;
       const ramdomPhoto = `https://picsum.photos/400/?random${Math.random()}`;
       const validPhoto = post.featuredImage ? post.featuredImage : ramdomPhoto;
 
       switch (true) {
         case ((index === 0) && !fromSearch):
           firstPost += `
-            <div class="first-card">
+            <div class="first-card show-post" data-id="${post.id}">
               <div class="image-large">
                 <img src="${validPhoto}">
               </div>
@@ -61,14 +66,14 @@ class Home extends PageState {
                 <div>
                   <h3>${post.title}</h3>
                   <p class="card-text truncate-text-multiline">${post.desc}</p>
-                  <span>${post.author}</span>
+                  <span>${author}</span>
                 </div>
               </div>
             </div>`;
           break;
         case ((index > 0) && (index <= 3) && !fromSearch):
           middlePosts += `
-            <div class="middle-card">
+            <div class="middle-card show-post" data-id="${post.id}">
               <div class="small-image">
                   <img src="${validPhoto}" alt="" srcset="">
               </div>
@@ -77,13 +82,13 @@ class Home extends PageState {
                 <p class="card-text truncate-text-multiline">
                   ${post.desc}
                 </p>
-                <span>${post.author}</span>
+                <span>${author}</span>
               </div>
             </div>`;
           break;
         case ((index === 4) && !fromSearch):
           fourth += `
-          <div class="fourth-card">
+          <div class="fourth-card show-post" data-id="${post.id}">
             <div class="image-large">
               <img src="${validPhoto}">
             </div>
@@ -91,18 +96,18 @@ class Home extends PageState {
             <p class="card-text truncate-text-multiline">
               ${post.desc}
             </p>
-            <span>${post.author}</span>
+            <span>${author}</span>
           </div>
             `;
           break;
         case (index > 4 || fromSearch):
           postList += `
-            <div class="card">
+            <div class="card show-post" data-id="${post.id}">
               <div class="card-body">
                 <h2>${post.title}</h2>
                 <p class="card-text truncate-text-multiline">
                 ${post.desc}</p>
-                <span>${post.author}</span>
+                <span>${author}</span>
               </div>
               <div class="small-image">
                 <img src="${validPhoto}" alt="" srcset="">
@@ -159,8 +164,26 @@ class Home extends PageState {
   listenCreateState() {
     document.querySelector('#createState').addEventListener('click', (e) => {
       e.preventDefault();
-      this.stateChanger.changeState('create');
+      this.stateChanger.changeState('create', {
+        '#blog': 'new',
+      });
+      document.location.hash = 'blog=new';
       this.stateChanger.request();
+    });
+  }
+
+  listenCards() {
+    const cards = document.querySelectorAll('.show-post');
+    cards.forEach((card) => {
+      card.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = card.getAttribute('data-id');
+        this.stateChanger.changeState('create', {
+          '#blog': id,
+        });
+        document.location.hash = `blog=${id}`;
+        this.stateChanger.request();
+      });
     });
   }
 }
