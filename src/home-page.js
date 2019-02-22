@@ -11,7 +11,6 @@ class Home extends PageState {
     this.listenTags();
     this.posts = await this.getPosts();
     this.createPostsCointainer(this.posts, false);
-    this.listenCards();
   }
 
   createMenu() {
@@ -53,6 +52,8 @@ class Home extends PageState {
       const author = post.author === undefined ? 'Rodrigo Lozano' : post.author;
       const ramdomPhoto = `https://picsum.photos/400/?random${Math.random()}`;
       const validPhoto = post.featuredImage ? post.featuredImage : ramdomPhoto;
+      const { date } = post;
+      const tags = post.tags ? post.tags.join() : '';
 
       switch (true) {
         case ((index === 0) && !fromSearch):
@@ -66,7 +67,8 @@ class Home extends PageState {
                 <div>
                   <h3>${post.title}</h3>
                   <p class="card-text truncate-text-multiline">${post.desc}</p>
-                  <span>${author}</span>
+                  <span>${author}</span><br>
+                  <span class="card-text">${moment(date).format('MMM D')} · ${tags}</span>
                 </div>
               </div>
             </div>`;
@@ -82,7 +84,8 @@ class Home extends PageState {
                 <p class="card-text truncate-text-multiline">
                   ${post.desc}
                 </p>
-                <span>${author}</span>
+                <span>${author}</span><br>
+                <span class="card-text">${moment(date).format('MMM D')} · ${tags}</span>
               </div>
             </div>`;
           break;
@@ -96,7 +99,8 @@ class Home extends PageState {
             <p class="card-text truncate-text-multiline">
               ${post.desc}
             </p>
-            <span>${author}</span>
+            <span>${author}</span><br>
+            <span class="card-text">${moment(date).format('MMM D')} · ${tags}</span>
           </div>
             `;
           break;
@@ -107,7 +111,8 @@ class Home extends PageState {
                 <h2>${post.title}</h2>
                 <p class="card-text truncate-text-multiline">
                 ${post.desc}</p>
-                <span>${author}</span>
+                <span>${author}</span><br>
+                <span class="card-text">${moment(date).format('MMM D')} · ${tags}</span>
               </div>
               <div class="small-image">
                 <img src="${validPhoto}" alt="" srcset="">
@@ -139,6 +144,7 @@ class Home extends PageState {
         </div>
     `;
     }
+    this.listenCards();
   }
 
   searchTag(tag) {
