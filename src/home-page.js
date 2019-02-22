@@ -11,6 +11,7 @@ class Home extends PageState {
     this.listenTags();
     this.posts = await this.getPosts();
     this.createPostsCointainer(this.posts, false);
+    this.listenHomeState();
   }
 
   createMenu() {
@@ -53,7 +54,7 @@ class Home extends PageState {
       const ramdomPhoto = `https://picsum.photos/400/?random${Math.random()}`;
       const validPhoto = post.featuredImage ? post.featuredImage : ramdomPhoto;
       const { date } = post;
-      const tags = post.tags ? post.tags.join() : '';
+      const tags = post.tags ? post.tags.join(post.tags.map(tag => `<span class="tag">${tag}</span>`)) : '';
 
       switch (true) {
         case ((index === 0) && !fromSearch):
@@ -190,6 +191,15 @@ class Home extends PageState {
         document.location.hash = `blog=${id}`;
         this.stateChanger.request();
       });
+    });
+  }
+
+  listenHomeState() {
+    document.querySelector('#homeState').addEventListener('click', (e) => {
+      e.preventDefault();
+      this.stateChanger.changeState('home');
+      document.location.hash = '';
+      this.stateChanger.request();
     });
   }
 }
