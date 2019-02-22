@@ -25,6 +25,8 @@ class Home extends PageState {
         <div class="flex">
             <h1 id="homeState">lacasaca.es</h1>
             <div>
+                <img src="assets/img/search.svg">
+                <input type="text" class="search-input">
                 <button id="createState" class="btn btn-primary">Create Post</button>
             </div>
         </div>
