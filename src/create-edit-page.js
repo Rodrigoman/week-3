@@ -182,6 +182,34 @@ class CreateEdit extends PageState {
       this.heartAnimation.goToAndPlay(15, true);
     });
   }
+
+  listenDelete() {
+    document.querySelector('#delete').addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      this.deleting = true;
+      this.interval = setInterval(() => {
+        this.confirmDelete += 1;
+        if (this.confirmDelete >= 60) {
+          this.deletePost();
+        }
+        this.deleteAnimation.setSpeed(0.5);
+        this.deleteAnimation.setDirection(1);
+        this.deleteAnimation.play();
+      }, 30);
+    });
+  }
+
+  listenDeleteOut() {
+    document.querySelector('#delete').addEventListener('mouseup', (e) => {
+      e.preventDefault();
+      clearInterval(this.interval);
+      this.deleting = false;
+      this.confirmDelete = 0;
+      this.deleteAnimation.setSpeed(1);
+      this.deleteAnimation.setDirection(-1);
+      this.deleteAnimation.play();
+    });
+  }
 }
 
 export default CreateEdit;
