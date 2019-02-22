@@ -153,6 +153,11 @@ class CreateEdit extends PageState {
   listenHomeState() {
     document.querySelector('#homeState').addEventListener('click', (e) => {
       e.preventDefault();
+      this.goToHome();
+    });
+  }
+
+  goToHome() {
       this.stateChanger.changeState('home');
       this.stateChanger.request();
     });
