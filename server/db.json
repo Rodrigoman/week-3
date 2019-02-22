@@ -3,7 +3,10 @@
     {
       "title": "Beautiful landscapes",
       "author": "Elizabeth Alvanez",
-      "tags": ["SELF","HEALTH"],
+      "tags": [
+        "SELF",
+        "HEALTH"
+      ],
       "desc": "Te vivendo accusamus hendrerit nec. Novum mentitum nec at, sumo molestiae an vix. Vix error deleniti ea. Sea ea elitr consequat. At sed quem accusata ullamcorper.",
       "id": 1
     },
@@ -14,9 +17,13 @@
       "id": 2
     },
     {
+      "featuredImage": "https://img5.goodfon.com/original/1920x1080/2/96/matej-andrasko-by-matej-andrasko-new-earth-art-rendering-kos.jpg",
       "title": "third movie about",
-      "author": "Rodrigo Lozano",
-      "desc": "An cum singulis torquatos, ut cum prompta verterem, illud nostrum consequat eam eu. At per splendide assueverit. Pri te illum dolorum fabellas, his in case definiebas, odio instructior signiferumque mel eu. Eos te saepe mollis, dolor nostrud recteque eu duo, id omnes accusata sensibus eum. Mei duis graece tacimates ex, audire philosophia eum in, latine docendi fuisset et mel. Eu pri numquam sapientem. Ne natum ludus vim, vituperata liberavisse ullamcorper id per, dicam lucilius no sed. Rebum labore sea ad, pri at dicam accusamus theophrastus. Omnium copiosae partiendo ne eum, pro ne meis error. Doming facete detraxit sed in. Populo abhorreant vis no, mei mandamus efficiendi no, est in wisi modus liber. Elit legimus scripserit sea et, exerci scripserit est eu. Exerci senserit eos no, eam malis graece integre ex, id nostrum consetetur persequeris mel. Sit at aliquam accusamus splendide, nam eu expetendis dissentiet. Eu quis esse malorum vel. An probo nobis reprehendunt per, denique electram in cum. Eam vide percipitur at, at luptatum urbanitas sea. Eripuit theophrastus concludaturque mea ei. Oratio everti splendide an his, ex ius tacimates quaerendum, per cu detraxit mnesarchum. Nec suscipit pericula no. Sed appetere vulputate te, suavitate aliquando usu an. Nec amet soluta altera no, tale ferri an nam. Et docendi offendit tacimates has. Vel at homero instructior definitionem, nam modo dissentias ad, in vis doming meliore vituperata. Id maiorum lobortis sea, ex per altera adolescens eloquentiam, oratio mucius nec no. Sint graeci pri in, vidisse phaedrum periculis quo te. An vim exerci suscipit, augue commune urbanitas mea in. Regione equidem sanctus ea vix, porro albucius vix et. Te his cibo feugait, ridens facilisis ut duo. Debet voluptatum mea id. Vim posse minim utinam ei, mentitum officiis et qui. Te cum stet invidunt. No enim suscipit cum, tota persius ut ius.",
+      "body": "<h3>A movie this cool</h3><p>deserves its own&nbsp;</p>",
+      "desc": "deserves its own&nbsp;",
+      "tags": [
+        ""
+      ],
       "id": 3
     },
     {
@@ -28,14 +35,22 @@
     {
       "title": "Second post",
       "author": "Rodrigo Lozano",
-      "tags": ["HEALTH","COLLECTIONS","POPULAR"],
+      "tags": [
+        "HEALTH",
+        "COLLECTIONS",
+        "POPULAR"
+      ],
       "desc": "In his sale scriptorem interpretaris, odio dissentiet delicatissimi duo te, purto idque vis cu. Duo debet partiendo pertinacia at, recteque explicari te est. Duo habeo vulputate ne, vel affert verterem te. No dicunt alienum has, no has iudico epicurei, utinam tritani usu in. Velit prodesset democritum cu qui, ut esse veritus nam. Cu nec odio affert delicata, ad impetus mentitum electram eum. Qui te regione mandamus indoctum. Per congue denique ei, eu sit commune neglegentur, ut vim purto periculis sadipscing. Vim doming feugiat definitiones ei. Liber nihil usu id, ius ad graeci recusabo. Eu has ancillae reprehendunt, mel in salutatus constituam. Ea qui adhuc legendos quaestio. No vix magna nobis aliquid. Ad solum augue forensibus usu, decore oporteat ut has. Tation detracto voluptua in pro, virtute evertitur mei et, his at dictas docendi. Eum cu munere dissentiunt ullamcorper, ad duo alii splendide efficiendi. Per dictas habemus dignissim an, vim odio magna interesset ad. No pro noluisse volutpat postulant, cum te brute discere albucius. Ut quando singulis similique usu, clita audiam expetenda in nec. Ignota putent has id, te sed suas solet temporibus. Verear diceret apeirian vis an, modus prodesset appellantur has ut, ei illud latine perpetua sit.",
       "id": 5
     },
     {
       "title": "Esplendid words!",
       "author": "Rodrigo Lozano",
-      "tags": ["HEALTH","SELF","POPULAR"],
+      "tags": [
+        "HEALTH",
+        "SELF",
+        "POPULAR"
+      ],
       "desc": "Graecis perfecto referrentur duo te, nam te aeque iisque oblique! Ne quod illud mediocritatem mei, eros iisque qui ne. Pro minim populo propriae cu. Vel at nominavi torquatos, tale neglegentur disputationi ex ius, munere ornatus incorrupte ne vel. Ex mazim lobortis quo, an per novum laudem? Probo prima nostro id sit, no nec elit feugait, has harum sapientem et. Dicant integre consectetuer in eum, eam id utroque suscipit, nam et putent meliore splendide. ",
       "featuredImage": "https://picsum.photos/400/?image=996",
       "id": 6
@@ -63,27 +78,118 @@
       "author": "Elizabeth Alvanez",
       "desc": "Te vivendo accusamus hendrerit nec. Novum mentitum nec at, sumo molestiae an vix. Vix error deleniti ea. Sea ea elitr consequat. At sed quem accusata ullamcorper.",
       "id": 10
+    },
+    {
+      "featuredImage": "https://i.kinja-img.com/gawker-media/image/upload/s--G-sdBgNR--/c_scale,f_auto,fl_progressive,q_80,w_800/z7jcryloxjedsztssw39.jpg",
+      "title": "Updated Post",
+      "body": "<h2>Que coool no</h2><p><span style=\"font-weight: normal;\">Hello this is a custom post<i> drag and drop</i> images from YOUR PC.</span></p><blockquote>Happy writing :D</blockquote>",
+      "desc": "<span style=\"font-weight: normal;\">Hello this is a custom post<i> drag and drop</i> images from YOUR PC.</span>",
+      "tags": [
+        "HEALTH",
+        "SELF"
+      ],
+      "id": 11
+    },
+    {
+      "featuredImage": "assets/img/roses.jpeg",
+      "title": "Hoy si ",
+      "body": "<h2>Editado papu...</h2><p><span style=\"font-weight: normal;\">THis is a description of the post.</span></p><blockquote>never give up</blockquote>",
+      "desc": "<span style=\"font-weight: normal;\">THis is a description of the post.</span>",
+      "tags": [
+        ""
+      ],
+      "id": 12
+    },
+    {
+      "featuredImage": "http://www.freedigitalphotos.net/images/img/homepage/394230.jpg",
+      "title": "strings",
+      "body": "<h2>New Post please</h2><p><span style=\"font-weight: normal;\">I expect this to work.&nbsp;</span>writing :D</p>",
+      "desc": "<span style=\"font-weight: normal;\">I expect this to work.&nbsp;</span>writing :D",
+      "tags": [
+        "HEALTH",
+        "SELF"
+      ],
+      "id": 13
+    },
+    {
+      "featuredImage": "assets/img/roses.jpeg",
+      "title": "Post with date",
+      "body": "<h2>with a date<i style=\"font-weight: normal; font-size: 22px; font-family: &quot;Work Sans&quot;, sans-serif;\">&nbsp;</i></h2><p><span style=\"font-weight: normal; font-size: 22px; font-family: &quot;Work Sans&quot;, sans-serif;\"><i>asdasdas</i> from YOUR PC.</span></p><blockquote>Happy writing :D</blockquote><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis penatibus arcu gravida senectus mollis montes libero sem, nulla euismod suspendisse velit at pretium. Nascetur felis risus hac fringilla platea cursus proin tincidunt, luctus dapibus et eros ut tortor penatibus. <br> <br>Maecenas volutpat viverra per phasellus pellentesque senectus quisque accumsan vestibulum arcu aliquam, proin dictumst sed interdum luctus purus fermentum fames dignissim elementum. Tincidunt dictum eu gravida ad nascetur odio vestibulum etiam, dui non mattis curae neque quam nisi euismod, elementum ultricies sem turpis nullam mauris ac. Ornare pharetra elementum eros habitant mauris orci risus conubia interdum primis ac rhoncus, aptent urna faucibus pretium vel dignissim duis curabitur tempor morbi. Dis class parturient potenti habitant luctus dictum, tincidunt id nec hac euismod, ligula molestie at vestibulum in. Dis nec laoreet elementum nulla erat phasellus primis, cras pretium vestibulum sociis suspendisse leo quisque, felis sodales at ante conubia ligula.",
+      "desc": "<span style=\"font-weight: normal; font-size: 22px; font-family: &quot;Work Sans&quot;, sans-serif;\"><i>asdasdas</i> from YOUR PC.</span>",
+      "tags": [
+        ""
+      ],
+      "id": 14
+    },
+    {
+      "featuredImage": "assets/img/roses.jpeg",
+      "title": "A new begginning",
+      "body": "<h2>This is going to be your  New Post...</h2><p><span style=\"font-weight: normal;\">Please, remember that you can<i> drag and drop</i> images from YOUR PC.</span></p><blockquote>Happy writing :D</blockquote><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis penatibus arcu gravida senectus mollis montes libero sem, nulla euismod suspendisse velit at pretium. Nascetur felis risus hac fringilla platea cursus proin tincidunt, luctus dapibus et eros ut tortor penatibus. <br> <br>Maecenas volutpat viverra per phasellus pellentesque senectus quisque accumsan vestibulum arcu aliquam, proin dictumst sed interdum luctus purus fermentum fames dignissim elementum. Tincidunt dictum eu gravida ad nascetur odio vestibulum etiam, dui non mattis curae neque quam nisi euismod, elementum ultricies sem turpis nullam mauris ac. Ornare pharetra elementum eros habitant mauris orci risus conubia interdum primis ac rhoncus, aptent urna faucibus pretium vel dignissim duis curabitur tempor morbi. Dis class parturient potenti habitant luctus dictum, tincidunt id nec hac euismod, ligula molestie at vestibulum in. Dis nec laoreet elementum nulla erat phasellus primis, cras pretium vestibulum sociis suspendisse leo quisque, felis sodales at ante conubia ligula.",
+      "desc": "<span style=\"font-weight: normal;\">Please, remember that you can<i> drag and drop</i> images from YOUR PC.</span>",
+      "tags": [
+        ""
+      ],
+      "id": 15
+    },
+    {
+      "featuredImage": "https://img5.goodfon.com/original/1920x1080/4/a7/craig-drake-by-craig-drake-tech-noir-the-terminator-terminat.jpg",
+      "title": "New blog style",
+      "body": "<h2>pleas work</h2><p><span style=\"font-size: 22px; font-family: &quot;Work Sans&quot;, sans-serif; font-weight: normal;\"><i>hello how are </i>YOU.</span></p><blockquote>Happy writing :D</blockquote><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis penatibus arcu gravida senectus mollis montes libero sem, nulla euismod suspendisse velit at pretium. Nascetur felis risus hac fringilla platea cursus proin tincidunt, luctus dapibus et eros ut tortor penatibus. <br> <br>Maecenas volutpat viverra per phasellus pellentesque senectus quisque accumsan vestibulum arcu aliquam, proin dictumst sed interdum luctus purus fermentum fames dignissim elementum. Tincidunt dictum eu gravida ad nascetur odio vestibulum etiam, dui non mattis curae neque quam nisi euismod, elementum ultricies sem turpis nullam mauris ac. Ornare pharetra elementum eros habitant mauris orci risus conubia interdum primis ac rhoncus, aptent urna faucibus pretium vel dignissim duis curabitur tempor morbi. Dis class parturient potenti habitant luctus dictum, tincidunt id nec hac euismod, ligula molestie at vestibulum in. Dis nec laoreet elementum nulla erat phasellus primis, cras pretium vestibulum sociis suspendisse leo quisque, felis sodales at ante conubia ligula.",
+      "desc": "<span style=\"font-size: 22px; font-family: &quot;Work Sans&quot;, sans-serif; font-weight: normal;\"><i>hello how are </i>YOU.</span>",
+      "date": "2019-02-22T00:57:11.610Z",
+      "tags": [
+        ""
+      ],
+      "id": 16
     }
   ],
   "tags": [
-    {"name":"HOME"},
-    {"name":"DOUBT"},
-    {"name":"CULTURE"},
-    {"name":"TECH"},
-    {"name":"STARTUPS"},
-    {"name":"STARTUPS"},
-    {"name":"SELF"},
-    {"name":"POLITICS"},
-    {"name":"DESIGN"},
-    {"name":"HEALTH"},
-    {"name":"POPULAR"},
-    {"name":"COLLECTIONS"},
-    {"name":"MORE"}
+    {
+      "name": "HOME"
+    },
+    {
+      "name": "DOUBT"
+    },
+    {
+      "name": "CULTURE"
+    },
+    {
+      "name": "TECH"
+    },
+    {
+      "name": "STARTUPS"
+    },
+    {
+      "name": "STARTUPS"
+    },
+    {
+      "name": "SELF"
+    },
+    {
+      "name": "POLITICS"
+    },
+    {
+      "name": "DESIGN"
+    },
+    {
+      "name": "HEALTH"
+    },
+    {
+      "name": "POPULAR"
+    },
+    {
+      "name": "COLLECTIONS"
+    },
+    {
+      "name": "MORE"
+    }
   ],
-  "template": [{
-    "id": 1,
-    "post" : "<h2>This is going to be Your Post...</h2><p><span style='font-weight: normal;'>Please, remember that you can<i> drag and drop</i> images from YOUR PC.</span></p><blockquote>Happy writing :D</blockquote>"
-  }],
+  "template": [
+    {
+      "id": 1,
+      "body": "<h2>This is going to be your  New Post...</h2><p><span style='font-weight: normal;'>Please, remember that you can<i> drag and drop</i> images from YOUR PC.</span></p><blockquote>Happy writing :D</blockquote><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis penatibus arcu gravida senectus mollis montes libero sem, nulla euismod suspendisse velit at pretium. Nascetur felis risus hac fringilla platea cursus proin tincidunt, luctus dapibus et eros ut tortor penatibus. <br> <br>Maecenas volutpat viverra per phasellus pellentesque senectus quisque accumsan vestibulum arcu aliquam, proin dictumst sed interdum luctus purus fermentum fames dignissim elementum. Tincidunt dictum eu gravida ad nascetur odio vestibulum etiam, dui non mattis curae neque quam nisi euismod, elementum ultricies sem turpis nullam mauris ac. Ornare pharetra elementum eros habitant mauris orci risus conubia interdum primis ac rhoncus, aptent urna faucibus pretium vel dignissim duis curabitur tempor morbi. Dis class parturient potenti habitant luctus dictum, tincidunt id nec hac euismod, ligula molestie at vestibulum in. Dis nec laoreet elementum nulla erat phasellus primis, cras pretium vestibulum sociis suspendisse leo quisque, felis sodales at ante conubia ligula."
+    }
+  ],
   "comments": [],
   "profile": {
     "name": "typicode"
