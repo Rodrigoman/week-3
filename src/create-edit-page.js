@@ -14,7 +14,6 @@ class CreateEdit extends PageState {
     this.state = 'reading';
     this.post = await this.getPostTemplate();
     this.allTags = await this.getAllTags();
-    console.log(this.allTags);
 
     this.createMenu();
     this.createEditBody();
@@ -26,9 +25,10 @@ class CreateEdit extends PageState {
     this.listenImgChange();
     this.stateChanger = context;
     this.listenHomeState();
-    // this.listenSave();
     this.listenHeart();
     this.listenEdit();
+
+    this.confirmDelete = 0; // if this get to 60 delete post
   }
 
   async getPostTemplate() {
@@ -53,10 +53,14 @@ class CreateEdit extends PageState {
   createEditBody() {
     let defaulImg = 'assets/img/roses.jpeg';
     let title = 'Your title...';
+    let tags = '';
+    let date = new Date();
 
     if (!this.isNew) {
       defaulImg = this.post.featuredImage === '' ? defaulImg : this.post.featuredImage;
       title = this.post.title === '' ? title : this.post.title;
+      tags = this.post.tags === undefined ? title : this.post.tags;
+      date = this.post.date === undefined ? date : this.post.date;
     }
 
     this.mainContainer.innerHTML = `
@@ -71,8 +75,9 @@ class CreateEdit extends PageState {
         </div>
       </div>
       <div>
-        <div class="tags">
-          <input type="text" id="tags" class="tags" placeholder="Enter your tags separated by comma">
+        <div class="meta-info">
+        <span class="card-text" >${moment(date).format('MMM D h:m')}</span>
+          <input type="text" id="tags" class="tags" placeholder="Enter your tags separated by comma" value="${tags}">
         </div>
       </div>
       <div>
@@ -104,8 +109,22 @@ class CreateEdit extends PageState {
     const stateDiv = this.mainContainer.querySelector('#currentSate');
     stateDiv.innerHTML = edit;
     if (this.state !== 'reading') {
-      edit = '<img id="save" src="assets/img/save.svg" style="width: 100%;"></img>';
+      edit = `
+        <img id="save" src="assets/img/save.svg" style="width: 100%;"></img><br>
+        <div class="delete">
+          <div id="delete"></div>
+        </div>`;
       stateDiv.innerHTML = edit;
+      this.deleteAnimation = lottie.loadAnimation({
+        container: document.querySelector('#delete'), // the dom element that will contain the animation
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        path: 'assets/img/trash.json', // the path to the animation json
+        name: 'delete',
+      });
+      this.listenDelete();
+      this.listenDeleteOut();
       this.listenSave();
     }
   }
@@ -150,6 +169,14 @@ class CreateEdit extends PageState {
     }
   }
 
+
+  async deletePost() {
+    const deleted = await this.http.delete(`${this.domain}posts/${this.post.id}`);
+    this.deleting = false;
+    this.deleteAnimationHandler();
+    this.goToHome();
+  }
+
   listenHomeState() {
     document.querySelector('#homeState').addEventListener('click', (e) => {
       e.preventDefault();
@@ -158,16 +185,12 @@ class CreateEdit extends PageState {
   }
 
   goToHome() {
-      this.stateChanger.changeState('home');
-      this.stateChanger.request();
-    });
+    this.stateChanger.changeState('home');
+    this.stateChanger.request();
   }
 
   listenSave() {
     document.querySelector('#save').addEventListener('click', (e) => {
-      e.stopPropagation();
-      console.log('asd');
-
       this.savePost();
     });
   }
@@ -182,8 +205,7 @@ class CreateEdit extends PageState {
   }
 
   listenHeart() {
-    document.querySelector('.heart').addEventListener('click', (e) => {
-      e.stopPropagation();
+    document.querySelector('#heart').addEventListener('click', (e) => {
       this.heartAnimation.goToAndPlay(15, true);
     });
   }
@@ -192,6 +214,20 @@ class CreateEdit extends PageState {
     document.querySelector('#delete').addEventListener('mousedown', (e) => {
       e.preventDefault();
       this.deleting = true;
+      this.deleteAnimationHandler();
+    });
+  }
+
+  listenDeleteOut() {
+    document.querySelector('#delete').addEventListener('mouseup', (e) => {
+      e.preventDefault();
+      this.deleting = false;
+      this.deleteAnimationHandler();
+    });
+  }
+
+  deleteAnimationHandler() {
+    if (this.deleting === true) {
       this.interval = setInterval(() => {
         this.confirmDelete += 1;
         if (this.confirmDelete >= 60) {
@@ -201,19 +237,13 @@ class CreateEdit extends PageState {
         this.deleteAnimation.setDirection(1);
         this.deleteAnimation.play();
       }, 30);
-    });
-  }
-
-  listenDeleteOut() {
-    document.querySelector('#delete').addEventListener('mouseup', (e) => {
-      e.preventDefault();
+    } else {
       clearInterval(this.interval);
-      this.deleting = false;
       this.confirmDelete = 0;
       this.deleteAnimation.setSpeed(1);
       this.deleteAnimation.setDirection(-1);
       this.deleteAnimation.play();
-    });
+    }
   }
 }
 
