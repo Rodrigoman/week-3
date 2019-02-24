@@ -9,6 +9,7 @@ class Home extends PageState {
     this.createMenu();
     this.listenCreateState();
     this.listenTags();
+    this.listenSearch()
     this.posts = await this.getPosts();
     this.createPostsCointainer(this.posts, false);
     this.listenHomeState();
@@ -160,6 +161,13 @@ class Home extends PageState {
     this.createPostsCointainer(filterPost, true);
   }
 
+  searchByName() {
+    const query = document.querySelector('.search-input').value.toLowerCase();
+    
+    const filterPost = this.posts.filter( post => {  return post.title.toLowerCase().includes(query) });
+    this.createPostsCointainer(filterPost, true);
+  }
+
   listenTags() {
     const tags = document.querySelectorAll('.tag');
     tags.forEach((tag) => {
@@ -170,6 +178,14 @@ class Home extends PageState {
     });
   }
 
+  listenSearch() {
+    const query = document.querySelector('.search-input');
+    query.addEventListener('keyup', (e) => {
+      e.preventDefault();
+      this.searchByName()
+    });
+  }
+  
   listenCreateState() {
     document.querySelector('#createState').addEventListener('click', (e) => {
       e.preventDefault();

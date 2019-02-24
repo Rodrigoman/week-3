@@ -1,12 +1,6 @@
 {
   "posts": [
     {
-      "title": "what",
-      "author": "Lala Ramirez",
-      "desc": "Mei te solet possit constituam, eam ne ludus possim. Quo natum zril sensibus in. Eu noster mediocrem elaboraret sit? In nulla nusquam intellegebat mea, eos oblique noluisse forensibus ea, te praesent adipiscing vis. Mea zril comprehensam no, admodum habemus deterruisset ut eum.",
-      "id": 7
-    },
-    {
       "title": "landscapes to see",
       "author": "Elizabeth Alvanez",
       "desc": "Mei te solet possit constituam, eam ne ludus possim. Quo natum zril sensibus in. Eu noster mediocrem elaboraret sit? In nulla nusquam intellegebat mea, eos oblique noluisse forensibus ea, te praesent adipiscing vis. Mea zril comprehensam no, admodum habemus deterruisset ut eum.",
@@ -79,6 +73,17 @@
         "HELLO"
       ],
       "id": 17
+    },
+    {
+      "featuredImage": "assets/img/roses.jpeg",
+      "title": "Your title...",
+      "body": "<h2>This is going to be your  New Post...</h2><p><span style=\"font-weight: normal;\">Please, remember that you can<i> drag and drop</i> images from YOUR PC.</span></p><blockquote>Happy writing :D</blockquote><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis penatibus arcu gravida senectus mollis montes libero sem, nulla euismod suspendisse velit at pretium. Nascetur felis risus hac fringilla platea cursus proin tincidunt, luctus dapibus et eros ut tortor penatibus. <br> <br>Maecenas volutpat viverra per phasellus pellentesque senectus quisque accumsan vestibulum arcu aliquam, proin dictumst sed interdum luctus purus fermentum fames dignissim elementum. Tincidunt dictum eu gravida ad nascetur odio vestibulum etiam, dui non mattis curae neque quam nisi euismod, elementum ultricies sem turpis nullam mauris ac. Ornare pharetra elementum eros habitant mauris orci risus conubia interdum primis ac rhoncus, aptent urna faucibus pretium vel dignissim duis curabitur tempor morbi. Dis class parturient potenti habitant luctus dictum, tincidunt id nec hac euismod, ligula molestie at vestibulum in. Dis nec laoreet elementum nulla erat phasellus primis, cras pretium vestibulum sociis suspendisse leo quisque, felis sodales at ante conubia ligula.",
+      "desc": "<span style=\"font-weight: normal;\">Please, remember that you can<i> drag and drop</i> images from YOUR PC.</span>",
+      "date": "2019-02-24T04:48:43.794Z",
+      "tags": [
+        ""
+      ],
+      "id": 18
     }
   ],
   "tags": [
