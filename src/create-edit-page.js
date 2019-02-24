@@ -159,6 +159,7 @@ class CreateEdit extends PageState {
     const date = new Date();
     let tags = [...new Set(document.querySelector('#tags').value.replace(/\s/g, '').split(','))];
     tags = tags.map(tag => tag.toUpperCase());
+    await this.saveTags(tags);
     if (this.isNew) {
       this.http.post(`${this.domain}posts`, {
         featuredImage, title, body, desc, date, tags,
@@ -169,7 +170,15 @@ class CreateEdit extends PageState {
       });
     }
   }
+  async saveTags(tags){
+    tags.forEach(newTag => {
+      const isOld = this.allTags.find(dbTag => { return (dbTag.name === newTag)})
+      if(!isOld){
+        this.http.post(`${this.domain}tags/`,{ 'name':newTag })
+      }
 
+    })
+  }
 
   async deletePost() {
     const deleted = await this.http.delete(`${this.domain}posts/${this.post.id}`);
@@ -234,7 +243,7 @@ class CreateEdit extends PageState {
         if (this.confirmDelete >= 60) {
           this.deletePost();
         }
-        this.deleteAnimation.setSpeed(0.5);
+        this.deleteAnimation.setSpeed(0.6);
         this.deleteAnimation.setDirection(1);
         this.deleteAnimation.play();
       }, 30);
