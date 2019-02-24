@@ -26,7 +26,6 @@ class CreateEdit extends PageState {
     this.stateChanger = context;
     this.listenHomeState();
     this.listenHeart();
-    this.listenEdit();
 
     this.confirmDelete = 0; // if this get to 60 delete post
   }
@@ -126,6 +125,8 @@ class CreateEdit extends PageState {
       this.listenDelete();
       this.listenDeleteOut();
       this.listenSave();
+    } else { // we are reading
+      this.listenEdit();
     }
   }
 
