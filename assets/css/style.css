@@ -158,6 +158,15 @@ div#tagsBar {
   font-size: small;
 }
 
+input.search-input {
+  font-size: 16px;
+  max-width: 140px;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+
 .tag {
   cursor: pointer;
 }
