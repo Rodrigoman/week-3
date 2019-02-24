@@ -57,8 +57,9 @@ class Home extends PageState {
       const ramdomPhoto = `https://picsum.photos/400/?random${Math.random()}`;
       const validPhoto = post.featuredImage ? post.featuredImage : ramdomPhoto;
       const { date } = post;
-      const tags = post.tags ? post.tags.join(post.tags.map(tag => `<span class="tag">${tag}</span>`)) : '';
-
+      const tags = post.tags ? post.tags.map(tag => `<span class="tag">${tag}</span>`).join() : '';
+      console.log(tags);
+      
       switch (true) {
         case ((index === 0) && !fromSearch):
           firstPost += `
