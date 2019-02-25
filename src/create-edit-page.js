@@ -150,7 +150,19 @@ class CreateEdit extends PageState {
     return tags;
   }
 
+  markAsError(element) {
+    document.querySelector('#secret-message').classList.remove('secret-message');
+    document.querySelector('#secret-message').classList.add('error-message');
+  }
+
+  cleanErrors() {
+    document.querySelector('#secret-message').classList.remove('error-message');
+    document.querySelector('#secret-message').classList.add('secret-message');
+  }
+
+
   async savePost() {
+    this.cleanErrors();
     const featuredImage = this.imgURL.value;
     const title = document.querySelector('#title').value;
     const body = this.editor.elements[0].innerHTML;
@@ -159,17 +171,23 @@ class CreateEdit extends PageState {
     const date = new Date();
     let tags = [...new Set(document.querySelector('#tags').value.replace(/\s/g, '').split(','))];
     tags = tags.map(tag => tag.toUpperCase());
+    if (title === '' || featuredImage === '') {
+      this.markAsError();
+      return
+    }
     await this.saveTags(tags);
     if (this.isNew) {
-      this.http.post(`${this.domain}posts`, {
+      await this.http.post(`${this.domain}posts`, {
         featuredImage, title, body, desc, date, tags,
       });
     } else {
-      this.http.put(`${this.domain}posts/${id}`, {
+      await this.http.put(`${this.domain}posts/${id}`, {
         featuredImage, title, body, desc, tags,
       });
     }
+  this.goToHome()
   }
+
   async saveTags(tags){
     tags.forEach(newTag => {
       const isOld = this.allTags.find(dbTag => { return (dbTag.name === newTag)})
