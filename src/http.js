@@ -1,4 +1,10 @@
 class EasyHTTP {
+  constructor() {
+    this.headers = {
+      'Content-type': 'application/json',
+    };
+  }
+
   // Make an HTTP GET Request
   async get(url) {
     const response = await fetch(url);
@@ -10,9 +16,7 @@ class EasyHTTP {
   async post(url, data) {
     const response = await fetch(url, {
       method: 'POST',
-      headers: {
-        'Content-type': 'application/json',
-      },
+      headers: this.headers,
       body: JSON.stringify(data),
     });
     const resData = await response.json();
@@ -23,9 +27,7 @@ class EasyHTTP {
   async put(url, data) {
     const response = await fetch(url, {
       method: 'PUT',
-      headers: {
-        'Content-type': 'application/json',
-      },
+      headers: this.headers,
       body: JSON.stringify(data),
     });
     const resData = await response.json();
@@ -36,9 +38,7 @@ class EasyHTTP {
   async delete(url) {
     const response = await fetch(url, {
       method: 'DELETE',
-      headers: {
-        'Content-type': 'application/json',
-      },
+      headers: this.headers,
     });
     const resData = await 'User Deleted...';
     return resData;
