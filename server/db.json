@@ -1,130 +1,127 @@
 {
   "posts": [
     {
-      "title": "landscapes to see",
-      "author": "Elizabeth Alvanez",
-      "desc": "Mei te solet possit constituam, eam ne ludus possim. Quo natum zril sensibus in. Eu noster mediocrem elaboraret sit? In nulla nusquam intellegebat mea, eos oblique noluisse forensibus ea, te praesent adipiscing vis. Mea zril comprehensam no, admodum habemus deterruisset ut eum.",
-      "id": 9
-    },
-    {
-      "title": "Some ideas",
-      "author": "Elizabeth Alvanez",
-      "desc": "Te vivendo accusamus hendrerit nec. Novum mentitum nec at, sumo molestiae an vix. Vix error deleniti ea. Sea ea elitr consequat. At sed quem accusata ullamcorper.",
-      "id": 10
-    },
-    {
-      "featuredImage": "https://i.kinja-img.com/gawker-media/image/upload/s--G-sdBgNR--/c_scale,f_auto,fl_progressive,q_80,w_800/z7jcryloxjedsztssw39.jpg",
-      "title": "Updated Post",
-      "body": "<h2>Que coool no</h2><p><span style=\"font-weight: normal;\">Hello this is a custom post<i> drag and drop</i> images from YOUR PC.</span></p><blockquote>Happy writing :D</blockquote>",
-      "desc": "<span style=\"font-weight: normal;\">Hello this is a custom post<i> drag and drop</i> images from YOUR PC.</span>",
-      "tags": [
-        "HEALTH",
-        "SELF"
-      ],
-      "id": 11
-    },
-    {
       "featuredImage": "assets/img/roses.jpeg",
-      "title": "Hoy si ",
-      "body": "<h2>Editado papu...</h2><p><span style=\"font-weight: normal;\">THis is a description of the post.</span></p><blockquote>never give up</blockquote>",
-      "desc": "<span style=\"font-weight: normal;\">THis is a description of the post.</span>",
-      "tags": [
-        ""
-      ],
-      "id": 12
-    },
-    {
-      "featuredImage": "http://www.freedigitalphotos.net/images/img/homepage/394230.jpg",
-      "title": "strings",
-      "body": "<h2>New Post please</h2><p><span style=\"font-weight: normal;\">I expect this to work.&nbsp;</span>writing :D</p>",
-      "desc": "<span style=\"font-weight: normal;\">I expect this to work.&nbsp;</span>writing :D",
-      "tags": [
-        "HEALTH",
-        "SELF"
-      ],
-      "id": 13
-    },
-    {
-      "featuredImage": "assets/img/roses.jpeg",
-      "title": "A new begginning",
-      "body": "<h2>This is going to be your  New Post...</h2><p><span style=\"font-weight: normal;\">Please, remember that you can<i> drag and drop</i> images from YOUR PC.</span></p><blockquote>Happy writing :D</blockquote><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis penatibus arcu gravida senectus mollis montes libero sem, nulla euismod suspendisse velit at pretium. Nascetur felis risus hac fringilla platea cursus proin tincidunt, luctus dapibus et eros ut tortor penatibus. <br> <br>Maecenas volutpat viverra per phasellus pellentesque senectus quisque accumsan vestibulum arcu aliquam, proin dictumst sed interdum luctus purus fermentum fames dignissim elementum. Tincidunt dictum eu gravida ad nascetur odio vestibulum etiam, dui non mattis curae neque quam nisi euismod, elementum ultricies sem turpis nullam mauris ac. Ornare pharetra elementum eros habitant mauris orci risus conubia interdum primis ac rhoncus, aptent urna faucibus pretium vel dignissim duis curabitur tempor morbi. Dis class parturient potenti habitant luctus dictum, tincidunt id nec hac euismod, ligula molestie at vestibulum in. Dis nec laoreet elementum nulla erat phasellus primis, cras pretium vestibulum sociis suspendisse leo quisque, felis sodales at ante conubia ligula.",
-      "desc": "<span style=\"font-weight: normal;\">Please, remember that you can<i> drag and drop</i> images from YOUR PC.</span>",
-      "tags": [
-        ""
-      ],
-      "id": 15
-    },
-    {
-      "featuredImage": "https://img5.goodfon.com/original/1920x1080/4/a7/craig-drake-by-craig-drake-tech-noir-the-terminator-terminat.jpg",
-      "title": "New blog style",
-      "body": "<h2>pleas work</h2><h2>Happy writing :D</h2><div><br></div><p>happy Wirting</p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis penatibus arcu gravida senectus mollis montes libero sem, nulla euismod suspendisse velit at pretium. Nascetur felis risus hac fringilla platea cursus proin tincidunt, luctus dapibus et eros ut tortor penatibus. <br> <br>Maecenas volutpat viverra per phasellus pellentesque senectus quisque accumsan vestibulum arcu aliquam, proin dictumst sed interdum luctus purus fermentum fames dignissim elementum. Tincidunt dictum eu gravida ad nascetur odio vestibulum etiam, dui non mattis curae neque quam nisi euismod, elementum ultricies sem turpis nullam mauris ac. Ornare pharetra elementum eros habitant mauris orci risus conubia interdum primis ac rhoncus, aptent urna faucibus pretium vel dignissim duis curabitur tempor morbi. Dis class parturient potenti habitant luctus dictum, tincidunt id nec hac euismod, ligula molestie at vestibulum in. Dis nec laoreet elementum nulla erat phasellus primis, cras pretium vestibulum sociis suspendisse leo quisque, felis sodales at ante conubia ligula.",
-      "desc": "happy Wirting",
+      "title": "5 ways to check if a string contains a substring in JavaScript",
+      "body": "<p>I’ve tested them for speed in Chrome on a MacBook Pro, and it appears ES6 .includes() is the fastest, and .match() is the slowest, with all the others almost as fast as ES6 .includes().</p><h2>1. ES6 .includes():</h2><p>var S = \"fullweb\";</p><p>S.includes(\"web\");</p><h2>2. RegExp .search():</h2><p>var S = \"fullweb\";</p><p>S.search(/web/);</p><h2>3. RegExp .match():</h2><p>var S = \"fullweb\";</p><p>S.match(/web/);</p><h2>4. RegExp .test():</h2><p>var S = \"fullweb\";</p><p>/web/.test(S)</p><h2>5. Good old’ .indexOf():</h2><p>var S = \"fullweb\";</p><p>S.indexOf(\"web\");</p><p><br></p><h2 class=\"\"></h2>",
+      "desc": "I’ve tested them for speed in Chrome on a MacBook Pro, and it appears ES6 .includes() is the fastest, and .match() is the slowest, with all the others almost as fast as ES6 .includes().",
+      "date": "2019-02-24T05:00:52.376Z",
       "tags": [
         "SELF"
       ],
-      "id": 16
+      "id": 1
     },
     {
-      "featuredImage": "assets/img/roses.jpeg",
-      "title": "With Date DAH",
-      "body": "<h2>This is going to be your  New Post...</h2><p><span style=\"font-weight: normal;\">Please, remember that you can<i> drag and drop</i> images from YOUR PC.</span></p><blockquote>Happy writing :D</blockquote><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis penatibus arcu gravida senectus mollis montes libero sem, nulla euismod suspendisse velit at pretium. Nascetur felis risus hac fringilla platea cursus proin tincidunt, luctus dapibus et eros ut tortor penatibus. <br> <br>Maecenas volutpat viverra per phasellus pellentesque senectus quisque accumsan vestibulum arcu aliquam, proin dictumst sed interdum luctus purus fermentum fames dignissim elementum. Tincidunt dictum eu gravida ad nascetur odio vestibulum etiam, dui non mattis curae neque quam nisi euismod, elementum ultricies sem turpis nullam mauris ac. Ornare pharetra elementum eros habitant mauris orci risus conubia interdum primis ac rhoncus, aptent urna faucibus pretium vel dignissim duis curabitur tempor morbi. Dis class parturient potenti habitant luctus dictum, tincidunt id nec hac euismod, ligula molestie at vestibulum in. Dis nec laoreet elementum nulla erat phasellus primis, cras pretium vestibulum sociis suspendisse leo quisque, felis sodales at ante conubia ligula.",
-      "desc": "<span style=\"font-weight: normal;\">Please, remember that you can<i> drag and drop</i> images from YOUR PC.</span>",
+      "featuredImage": "https://www.telia.fi/dam/jcr:b9c96333-bd97-495c-96f4-6b5f3cecd597/anders-jilden-478920-unsplash_1920_web_hero.jpg",
+      "title": "Why 5g its not for you",
+      "body": "<p>5G is being lauded as the next big innovation that will transform the broadband marketplace overnight, solve all our mobile bandwidth woes, and drive the coming Internet of Things (IOT) revolution. All this excitement has also resulted in some serious misconceptions — namely, that 5G will replace the need for fiber-optic broadband networks. Far from being replaced by new 5G wireless technology, fiber networks are the critical underpinning that will power 5G and other wireless technologies.<br></p><p><br></p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis penatibus arcu gravida senectus mollis montes libero sem, nulla euismod suspendisse velit at pretium. Nascetur felis risus hac fringilla platea cursus proin tincidunt, luctus dapibus et eros ut tortor penatibus. <br> <br>Maecenas volutpat viverra per phasellus pellentesque senectus quisque accumsan vestibulum arcu aliquam, proin dictumst sed interdum luctus purus fermentum fames dignissim elementum. Tincidunt dictum eu gravida ad nascetur odio vestibulum etiam, dui non mattis curae neque quam nisi euismod, elementum ultricies sem turpis nullam mauris ac. Ornare pharetra elementum eros habitant mauris orci risus conubia interdum primis ac rhoncus, aptent urna faucibus pretium vel dignissim duis curabitur tempor morbi. Dis class parturient potenti habitant luctus dictum, tincidunt id nec hac euismod, ligula molestie at vestibulum in. Dis nec laoreet elementum nulla erat phasellus primis, cras pretium vestibulum sociis suspendisse leo quisque, felis sodales at ante conubia ligula.",
+      "desc": "5G is being lauded as the next big innovation that will transform the broadband marketplace overnight, solve all our mobile bandwidth woes, and drive the coming Internet of Things (IOT) revolution. All this excitement has also resulted in some serious misconceptions — namely, that 5G will replace the need for fiber-optic broadband networks. Far from being replaced by new 5G wireless technology, fiber networks are the critical underpinning that will power 5G and other wireless technologies.<br>",
+      "date": "2019-02-24T05:45:57.846Z",
       "tags": [
-        "HELLO"
+        "TECH"
       ],
-      "id": 17
+      "id": 2
     },
     {
-      "featuredImage": "assets/img/roses.jpeg",
-      "title": "Your title...",
-      "body": "<h2>This is going to be your  New Post...</h2><p><span style=\"font-weight: normal;\">Please, remember that you can<i> drag and drop</i> images from YOUR PC.</span></p><blockquote>Happy writing :D</blockquote><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis penatibus arcu gravida senectus mollis montes libero sem, nulla euismod suspendisse velit at pretium. Nascetur felis risus hac fringilla platea cursus proin tincidunt, luctus dapibus et eros ut tortor penatibus. <br> <br>Maecenas volutpat viverra per phasellus pellentesque senectus quisque accumsan vestibulum arcu aliquam, proin dictumst sed interdum luctus purus fermentum fames dignissim elementum. Tincidunt dictum eu gravida ad nascetur odio vestibulum etiam, dui non mattis curae neque quam nisi euismod, elementum ultricies sem turpis nullam mauris ac. Ornare pharetra elementum eros habitant mauris orci risus conubia interdum primis ac rhoncus, aptent urna faucibus pretium vel dignissim duis curabitur tempor morbi. Dis class parturient potenti habitant luctus dictum, tincidunt id nec hac euismod, ligula molestie at vestibulum in. Dis nec laoreet elementum nulla erat phasellus primis, cras pretium vestibulum sociis suspendisse leo quisque, felis sodales at ante conubia ligula.",
-      "desc": "<span style=\"font-weight: normal;\">Please, remember that you can<i> drag and drop</i> images from YOUR PC.</span>",
-      "date": "2019-02-24T04:48:43.794Z",
+      "featuredImage": "https://cdn2us.denofgeek.com/sites/denofgeekus/files/styles/article_width/public/charliewhy.jpg?itok=a1HRydt-",
+      "title": "Death Generator lets you put custom text in all the classic video games",
+      "body": "<p>There exist a lot of meme generators on the internet, but few are better organized or authentically made than the Death Generator. Created by programmer Foone Turing, the open-source tool first began as a generator for death screens from Sierra games, starting with Police Quest 2 in 2017. Turing gets most of his screenshots by actually playing through the games, and he’s now up to dozens of classic titles and newer games alike, from SimCity 2000 to Animal Crossing: Wild World.</p><p>“The inspiration was just seeing a bunch of screenshots going around, of games like PQ2 and vague memories of a Something Awful Photoshop post where they made fake SimCity 2000 advisor messages,” Turing told The Verge. “These games have very distinctive dialog boxes with very lovely pixels, so it’s kinda always funny to see messages stuffed into them.” Indeed, Tom Nook saying foul things will never not be funny.</p>",
+      "desc": "There exist a lot of meme generators on the internet, but few are better organized or authentically made than the Death Generator. Created by programmer Foone Turing, the open-source tool first began as a generator for death screens from Sierra games, starting with Police Quest 2 in 2017. Turing gets most of his screenshots by actually playing through the games, and he’s now up to dozens of classic titles and newer games alike, from SimCity 2000 to Animal Crossing: Wild World.",
       "tags": [
-        ""
+        "TECH",
+        "SELF"
       ],
-      "id": 18
+      "id": 3
+    },
+    {
+      "featuredImage": "https://cf-images.us-east-1.prod.boltdns.net/v1/static/769341148/06f52471-3464-47df-802f-c145bbaad84d/3256f4ea-8e0b-47b1-8cb1-59f0b1ff9913/1280x720/match/image.jpg",
+      "title": "2019 Oscars: the complete list of winners",
+      "body": "<p>The 2019 Oscars ceremony got off to a mildly awkward start, as Maya Rudolph, Tina Fey, and Amy Poehler, presenting the Best Supporting Actress award, did a little comedy routine acknowledging that this year’s presentation has no host, no Most Popular Film award, and no awards given out during commercials. (“And Mexico will not pay for the wall.”) It was a wry little dig at the many embarrassing controversies the Academy of Motion Picture Arts and Sciences have faced this year as they attempted to retool the ceremony. The attempts to shorten the ceremony by cutting some awards, while simultaneously adding more crowd-pleasing elements, led to a lot of online backlash.</p><p>The producers seem to have responded by streamlining the ceremony in quieter ways: the show, still in progress, is moving briskly, with nominees’ mics being rapidly cut off if they aren’t brief and to the point in their acknowledgment speeches, and most presenter setups keeping things short and to the point. The exception: a bunch of dry comic business involving Melissa McCarthy and Brian Tyree Henry, dressed in elaborate costumes meant as a visual joke referencing Best Picture nominee The Favourite. The stuffed rabbits and bunny puppet are a reference to the pets Olivia Colman’s character, Queen Anne, obsesses over in the film.</p><h2></h2>",
+      "desc": "The 2019 Oscars ceremony got off to a mildly awkward start, as Maya Rudolph, Tina Fey, and Amy Poehler, presenting the Best Supporting Actress award, did a little comedy routine acknowledging that this year’s presentation has no host, no Most Popular Film award, and no awards given out during commercials. (“And Mexico will not pay for the wall.”) It was a wry little dig at the many embarrassing controversies the Academy of Motion Picture Arts and Sciences have faced this year as they attempted to retool the ceremony. The attempts to shorten the ceremony by cutting some awards, while simultaneously adding more crowd-pleasing elements, led to a lot of online backlash.",
+      "tags": [
+        "FILM",
+        "POPULAR"
+      ],
+      "id": 4
+    },
+    {
+      "featuredImage": "https://sm.ign.com/ign_es/screenshot/default/como-entrenar-a-tu-dragon-2-critica_wypy.jpg",
+      "title": "How to Train Your Dragon 3 is a simple movie",
+      "body": "<p>Over the course of the 15 years between Toy Story and Toy Story 3, Pixar Animation Studios underwent a monumental evolution from a computer firm taking its first steps into animation to an industry-changing powerhouse. Over the nine years between How to Train Your Dragon and the new trilogy-capper How to Train Your Dragon: The Hidden World, DreamWorks Animation went through a much more troubled evolution with rapid expansion, financial struggles, leadership changes, and an eventual sale to NBCUniversal. Both companies are producing more visually sophisticated, ambitious films than ever before, but where Pixar found solid artistic and commercial footing over the course of its signature trilogy, DreamWorks has consistently struggled. And while the new film is a beautiful spectacle, it shows a company that’s still, as always, struggling to find a strong identity of its own.</p><p>Exactly like Toy Story 3, How to Train Your Dragon: The Hidden World is about growing up and letting go — somewhat suspiciously so, given that Toy Story 3 earned such high praise for its handling of the theme nearly a decade ago, and Hidden World doesn’t have many more ideas than that. In the third installment in the series, young Viking chieftain Hiccup (Jay Baruchel) has to learn that his identity isn’t entirely bound up in Toothless, the dragon partner he befriended in the series’s first installment. Given their deep and satisfying friendship, that sometimes feels like an odd message. Metaphorically speaking, it feels like the movie’s saying that to grow up, people need to let go of their beloved pets. But writer-director Dean DeBlois at least loads the story with visual style and a lot of heartfelt wonder</p><h2></h2>",
+      "desc": "Over the course of the 15 years between Toy Story and Toy Story 3, Pixar Animation Studios underwent a monumental evolution from a computer firm taking its first steps into animation to an industry-changing powerhouse. Over the nine years between How to Train Your Dragon and the new trilogy-capper How to Train Your Dragon: The Hidden World, DreamWorks Animation went through a much more troubled evolution with rapid expansion, financial struggles, leadership changes, and an eventual sale to NBCUniversal. Both companies are producing more visually sophisticated, ambitious films than ever before, but where Pixar found solid artistic and commercial footing over the course of its signature trilogy, DreamWorks has consistently struggled. And while the new film is a beautiful spectacle, it shows a company that’s still, as always, struggling to find a strong identity of its own.",
+      "date": "2019-02-25T03:59:09.786Z",
+      "tags": [
+        "FILM",
+        "POPULAR",
+        "ENTERTAIMENT"
+      ],
+      "id": 5
+    },
+    {
+      "featuredImage": "https://mediavideo.blastingnews.com/p/4/2018/05/13/8cbfe8b7-6272-4b74-a236-c7805618e1c8.jpg",
+      "title": "NASA gives SpaceX the okay to launch new passenger",
+      "body": "<p>It’s official: the first uncrewed flight of SpaceX’s new passenger capsule, the Crew Dragon, is set to launch on March 2nd out of Cape Canaveral, Florida. Both NASA and SpaceX agreed to move forward with the flight today after doing a full day of reviews, determining that the vehicle was ready to see space and travel to the International Space Station. If the capsule successfully makes it to orbit, SpaceX will be one crucial step closer to putting the first humans on board its spacecraft.</p><p>This flight, called Demonstration Mission-1, or DM-1, is a major milestone for NASA’s Commercial Crew program, an initiative to send NASA astronauts to the International Space Station aboard private vehicles. Since the Shuttle program ended, NASA has relied on Russia to ferry its astronauts to and from low Earth orbit — an expensive arrangement that limited the types of missions NASA could run. But soon, US astronauts could be launching on US-made vehicles once again, as NASA did during the Space Shuttle era.</p><p>For the program, both SpaceX and rival company Boeing, have been developing new capsules to transport NASA astronauts to and from low Earth orbit. NASA wants the two companies to send these vehicles to space first, empty, before putting people on board. Boeing’s vehicle, the CST-100 Starliner, is set to fly uncrewed for the first time this April. But SpaceX’s Crew Dragon has been at Cape Canaveral since December, ready to fly. SpaceX even tested out the engines on the Falcon 9 rocket it plans to use to carry the capsule to orbit. The company just needed NASA’s approval to make it happen.</p><p>SPACEX IS JUST A WEEK AWAY FROM THE BIG FLIGHT</p><p>NASA tentatively set the March 2nd date a few weeks ago, and now that the okay has been given, SpaceX is just a week away from the big flight. The capsule is set to fly at 2:48AM ET from NASA’s Kennedy Space Center in Florida — an early morning launch time dictated by the International Space Station’s position in orbit. If the Crew Dragon gets off the ground then, it’ll stay in orbit until early morning on Sunday and then attempt to automatically dock with the space station. It will then remain at the ISS for a week before detaching early Friday morning and returning to Earth to splash down in the Atlantic Ocean near Florida.</p><h2></h2>",
+      "desc": "It’s official: the first uncrewed flight of SpaceX’s new passenger capsule, the Crew Dragon, is set to launch on March 2nd out of Cape Canaveral, Florida. Both NASA and SpaceX agreed to move forward with the flight today after doing a full day of reviews, determining that the vehicle was ready to see space and travel to the International Space Station. If the capsule successfully makes it to orbit, SpaceX will be one crucial step closer to putting the first humans on board its spacecraft.",
+      "tags": [
+        "SPACE",
+        "POPULAR"
+      ],
+      "id": 6
+    },
+    {
+      "featuredImage": "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2018/10/08/105494243-1539021405081spacexlaunchandlandtwitter.1910x1000.png?v=1539021459",
+      "title": "SCIENCE   SPACE Neptune’s newly discovered moon",
+      "body": "<p>A newly discovered small moon of Neptune is coming into clearer focus as astronomers have now pinpointed this tiny rock’s orbit and where it might have come from. The moon’s existence heightens the possibility that there are even more tiny worlds around Neptune that we just haven’t seen yet.</p><h2></h2>",
+      "desc": "A newly discovered small moon of Neptune is coming into clearer focus as astronomers have now pinpointed this tiny rock’s orbit and where it might have come from. The moon’s existence heightens the possibility that there are even more tiny worlds around Neptune that we just haven’t seen yet.",
+      "tags": [
+        "SPACE"
+      ],
+      "id": 7
+    },
+    {
+      "featuredImage": "https://static.gamespot.com/uploads/original/1197/11970954/3129610-ffxv_tgs_screenshot_%2818%29.jpg",
+      "title": "When did cutscenes start looking worse than actual video games?",
+      "body": "<h3>I started playing video games around the time when they were transitioning to 3D and making use of CDs,</h3><p>which meant that the capacity to store beautiful visuals far outstripped the hardware’s ability to render them in real time. The upshot of this was that big-budget games often didn’t look great while you were playing them, but every now and then, you’d be treated to a lavishly rendered cutscene that would not only blow you away with its detail and artistry, but provide crucial context for what the regular graphics were actually meant to look like.</p><p>The canonical example of this is Square Enix’s Final Fantasy games for the original PlayStation. Last week, Final Fantasy VIII celebrated its 20th anniversary, while IX was re-released for the Nintendo Switch and Xbox One — I know, VIII got robbed — and the subject happened to be on my mind this week as I played through one of 2019’s newest, highest-budget, most visually stunning games. What I’m saying is that Anthem’s cutscenes look really bad.</p><h2></h2>",
+      "desc": "which meant that the capacity to store beautiful visuals far outstripped the hardware’s ability to render them in real time. The upshot of this was that big-budget games often didn’t look great while you were playing them, but every now and then, you’d be treated to a lavishly rendered cutscene that would not only blow you away with its detail and artistry, but provide crucial context for what the regular graphics were actually meant to look like.",
+      "tags": [
+        "VIDEOGAMES",
+        "POPULAR"
+      ],
+      "id": 8
     }
   ],
   "tags": [
     {
-      "name": "HOME"
+      "name": "SELF",
+      "id": 1
     },
     {
-      "name": "DOUBT"
+      "name": "TECH",
+      "id": 2
     },
     {
-      "name": "CULTURE"
+      "name": "FILM",
+      "id": 3
     },
     {
-      "name": "TECH"
+      "name": "POPULAR",
+      "id": 4
     },
     {
-      "name": "STARTUPS"
+      "name": "ENTERTAIMENT",
+      "id": 5
     },
     {
-      "name": "STARTUPS"
+      "name": "SPACE",
+      "id": 6
     },
     {
-      "name": "SELF"
+      "name": "",
+      "id": 7
     },
     {
-      "name": "POLITICS"
-    },
-    {
-      "name": "DESIGN"
-    },
-    {
-      "name": "HEALTH"
-    },
-    {
-      "name": "POPULAR"
-    },
-    {
-      "name": "COLLECTIONS"
-    },
-    {
-      "name": "MORE"
+      "name": "VIDEOGAMES",
+      "id": 8
     }
   ],
   "template": [
