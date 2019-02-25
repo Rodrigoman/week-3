@@ -16,7 +16,6 @@ class Context {
         this.changeState('home');
         break;
     }
-    console.log(this.currentUrl);
   }
 
   changeState(state, params) {

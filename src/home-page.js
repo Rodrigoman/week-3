@@ -58,7 +58,6 @@ class Home extends PageState {
       const validPhoto = post.featuredImage ? post.featuredImage : ramdomPhoto;
       const { date } = post;
       const tags = post.tags ? post.tags.map(tag => `<span class="tag">${tag}</span>`).join() : '';
-      console.log(tags);
       
       switch (true) {
         case ((index === 0) && !fromSearch):
